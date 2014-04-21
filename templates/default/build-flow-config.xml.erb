@@ -2,6 +2,12 @@
 <com.cloudbees.plugins.flow.BuildFlow plugin="build-flow-plugin@0.10">
   <actions/>
   <description><![CDATA[<%= @build_description %>]]></description>
+  <logRotator class="hudson.tasks.LogRotator">
+    <daysToKeep><%= @build_days_to_keep || -1 %></daysToKeep>
+    <numToKeep><%= @build_num_to_keep || -1 %></numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>-1</artifactNumToKeep>
+  </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
   <% if @build_parameters %>

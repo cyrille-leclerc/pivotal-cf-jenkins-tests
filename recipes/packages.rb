@@ -1,5 +1,6 @@
 package 'curl'
 package 'htop'
+package 'jmeter'
 package 'vim'
 
 package 'libxslt-dev'
